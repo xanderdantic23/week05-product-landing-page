@@ -146,3 +146,21 @@ Below is an overview of the key directories in this project and their specific r
 | **Footer** | ![Footer](screenshots/Footer.png) |
 | **Blade Components Folder** | ![Blade Components Folder](screenshots/BladeComponents.png) |
 | **GitHub Repository** | ![GitHub Repository](screenshots/GitHubRepository.png) |
+
+---
+
+## 10. Before-and-After Comparison
+
+### Visual Evolution & UI/UX Improvements
+![Before](documentation/BEFORE.png)
+* **Before Design (Wireframe / Unstyled Layout):**
+  * Basic, unstyled HTML document structure using default browser typography and black text.
+  * Standard bulleted lists for features, unstyled native buttons, and plain text placeholders for image showcase sections.
+  * Lack of clear visual hierarchy, color contrast, or grid layout alignment.
+
+![After](documentation/AFTER.png)
+* **After Design (Final Responsive Interface):**
+  * Modern, high-contrast black-and-white aesthetic built with custom Tailwind CSS utility classes.
+  * Component-driven modular architecture using Laravel Blade (`<x-navbar>`, `<x-hero>`, `<x-feature-card>`, etc.).
+  * Fully responsive CSS Grid and Flexbox layouts optimized across Mobile, Tablet, and Desktop viewports.
+  * Integrated local photography (`public/images/`) and clean typography with uppercase tracked headings for an elevated brand identity.
