@@ -46,7 +46,7 @@
 
 ## 6. Blade Components
 
-Blade Components allow breaking UI elements into modular, reusable blocks to eliminate code duplication and maintain frontend cleanliness.
+* **What are Blade Components?** Blade Components are self-contained, reusable custom HTML tags in Laravel (such as `<x-button>` or `<x-feature-card>`) that bundle markup, styling, and logic into single files. They allow developers to pass dynamic props and content slots without copying and pasting HTML across multiple pages.
 
 ### Why Reusable Components Improve Maintainability
 * **Single Source of Truth:** Updating styling or layout logic in one component file instantly applies across all instances in the entire application without needing to manually edit multiple files.
