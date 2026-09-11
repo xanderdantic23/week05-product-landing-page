@@ -83,12 +83,14 @@ Blade Components allow breaking UI elements into modular, reusable blocks to eli
 
 | Screenshot Asset | Visual Preview |
 | :--- | :---: |
-| **Desktop View** | ![Desktop View](screenshots/01_registration_form.png) |
-| **Tablet View** | ![Tablet View](screenshots/02_validation_errors.png) |
-| **Mobile View** | ![Mobile View](screenshots/03_successful.png) |
-| **Navigation Bar** | ![Navigation Bar](screenshots/04_flash_message.png) |
-| **Hero Section** | ![Hero Section](screenshots/05_uploaded.png) |
-| **Features Section** | ![Features Section](screenshots/06_database.png) |
-| **Pricing Section** | ![Pricing Section](screenshots/07_profile.png) |
-| **Testimonials** | ![Testimonials](screenshots/08_project_structure.png) |
-| **GitHub Repository** | ![Repository](screenshots/09_github_repository.png) |
+| **Desktop View** | ![Desktop View](screenshots/DesktopView.png) |
+| **Tablet View** | ![Tablet View](screenshots/TabletView.png) |
+| **Mobile View** | ![Mobile View](screenshots/MobileView.png) |
+| **Navigation Bar** | ![Navigation Bar](screenshots/NavigationBar.png) |
+| **Hero Section** | ![Hero Section](screenshots/HeroSection.png) |
+| **Features Section** | ![Features Section](screenshots/FeaturesSection.png) |
+| **Pricing Section** | ![Pricing Section](screenshots/PricingSection.png) |
+| **Testimonials** | ![Testimonials](screenshots/Testimonials.png) |
+| **Footer** | ![Footer](screenshots/Footer.png) |
+| **Blade Components Folder** | ![Blade Components Folder](screenshots/09_github_repository.png) |
+| **GitHub Repository** | ![GitHub Repository](screenshots/09_github_repository.png) |
