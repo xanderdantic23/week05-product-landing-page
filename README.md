@@ -48,15 +48,52 @@
 
 Blade Components allow breaking UI elements into modular, reusable blocks to eliminate code duplication and maintain frontend cleanliness.
 
-### Component Architecture
-* `resources/views/layouts/app.blade.php` - Main global layout wrapper.
-* `resources/views/components/navbar.blade.php` - Sticky navigation header.
-* `resources/views/components/hero.blade.php` - Brand intro section.
-* `resources/views/components/feature-card.blade.php` - Reusable service/feature card.
-* `resources/views/components/pricing-card.blade.php` - Package pricing tier card.
-* `resources/views/components/testimonial-card.blade.php` - Customer review card.
-* `resources/views/components/button.blade.php` - Primary/secondary CTA button.
-* `resources/views/components/footer.blade.php` - Brand details, links, and contact section.
+### Why Reusable Components Improve Maintainability
+* **Single Source of Truth:** Updating styling or layout logic in one component file instantly applies across all instances in the entire application without needing to manually edit multiple files.
+* **Cleaner Page Views:** Page files like `landing.blade.php` remain concise, readable, and focused on high-level content structure rather than long, repetitive blocks of HTML.
+* **Reduced Bug Surface Area:** Centralizing markup reduces copying/pasting errors, missing tags, or inconsistent styling classes.
+
+### Benefits of Modular UI Development
+* **Scalability:** Easily add new features or pages by reusing existing components like buttons, cards, and navigation bars.
+* **Consistency:** Enforces unified branding, spacing, typography, and button styles across all device viewports.
+* **Team Collaboration:** Multiple developers can work independently on separate components without causing merge conflicts on main page views.
+
+---
+
+### Sample Code Snippets
+
+#### 1. Reusable Feature Card Component (`resources/views/components/feature-card.blade.php`)
+```html
+@props(['title', 'description', 'icon' => '✂️'])
+
+<div class="feature-card">
+    <div class="text-3xl mb-4">{{ $icon }}</div>
+    <h3 class="text-xl font-bold uppercase tracking-wider text-white mb-2">{{ $title }}</h3>
+    <p class="text-neutral-400 text-sm leading-relaxed">{{ $description }}</p>
+</div>
+```
+
+#### 2. Reusable Button Component (`resources/views/components/button.blade.php`)
+```html
+@props(['type' => 'primary', 'href' => '#'])
+
+<a href="{{ $href }}" {{ $attributes->merge(['class' =>$type === 'primary' ? 'btn-primary' : 'btn-secondary']) }}>
+    {{ $slot }}
+</a>
+```
+
+#### 3. Component Usage in Landing Page (`resources/views/pages/landing.blade.php`)
+```html
+<div class="grid md:grid-cols-3 gap-6">
+    <x-feature-card 
+        icon="💈" 
+        title="Master Barbers" 
+        description="Licensed professionals trained in modern precision fading and classic straight-razor cuts." 
+    />
+</div>
+
+<x-button href="#pricing" type="primary">View Services</x-button>
+```
 
 ---
 
@@ -72,12 +109,27 @@ Blade Components allow breaking UI elements into modular, reusable blocks to eli
 
 ## 8. Folder Structure
 
-* **resources/views/layouts**
-* **resources/views/components**
-* **resources/views/pages** 
-* **public**
-* **screenshots** 
-* **documentation**  
+Below is an overview of the key directories in this project and their specific roles:
+
+* **`resources/views/layouts`**
+  Contains master view templates (e.g., `app.blade.php`) that establish the global HTML document structure, `<head>` tags, meta properties, CSS/JS asset references, and primary content placement via `@yield('content')` or `{{ $slot }}`.
+
+* **`resources/views/components`**
+  Houses modular, reusable Blade UI components (such as `navbar.blade.php`, `hero.blade.php`, `feature-card.blade.php`, `pricing-card.blade.php`, `testimonial-card.blade.php`, `button.blade.php`, and `footer.blade.php`). These reduce code duplication and simplify frontend maintenance.
+
+* **`resources/views/pages`**
+  Stores top-level page views (such as `landing.blade.php`) that extend the main layout and combine components to compose full application views.
+
+* **`public`**
+  The web server's public document root. Holds static assets, stylesheets, compiled scripts, and local images (including showcase photos and client avatars stored in `public/images/`).
+
+* **`screenshots`**
+  Contains visual documentation demonstrating the responsive design across Desktop, Tablet, and Mobile views, alongside individual component close-ups, VS Code folder views, and GitHub proof.
+
+* **`documentation`**
+  Stores submission assets including before-and-after visual comparisons, wireframes, and project reflection notes tracking the UI/UX design process.
+
+---
 
 ## 9. Screenshots
 
@@ -92,5 +144,5 @@ Blade Components allow breaking UI elements into modular, reusable blocks to eli
 | **Pricing Section** | ![Pricing Section](screenshots/PricingSection.png) |
 | **Testimonials** | ![Testimonials](screenshots/Testimonials.png) |
 | **Footer** | ![Footer](screenshots/Footer.png) |
-| **Blade Components Folder** | ![Blade Components Folder](screenshots/09_github_repository.png) |
-| **GitHub Repository** | ![GitHub Repository](screenshots/09_github_repository.png) |
+| **Blade Components Folder** | ![Blade Components Folder](screenshots/BladeComponents.png) |
+| **GitHub Repository** | ![GitHub Repository](screenshots/GitHubRepository.png) |
