@@ -1,58 +1,94 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## 1. Project Title
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**DHONDYS BARBERSHOP - Responsive Product Landing Page**  
+*A modern, high-contrast, black-and-white responsive landing page built for **Dhondy's Barbershop** using **Laravel**, **Tailwind CSS**, and **Blade Components**.*
 
-## About Laravel
+**Subject:** ITST 302 — Client-Server Technologies  
+**Project:** Mini Project 04: Responsive Product Landing Page using Laravel, Tailwind CSS, and Blade Components 
+**Course:** Bachelor of Science in Information Technology (BSIT)  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 2. Introduction
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* **What is a Product Landing Page?** A landing page is a standalone web page designed specifically for marketing or advertising campaigns. It serves as the initial entry point for potential clients.
+* **Importance for Businesses:** For local service businesses like barbershops, a professional landing page establishes brand credibility, showcases services and transparent pricing, displays customer reviews, and drives direct client conversions/bookings.
+* **Purpose of the Project:** This project transforms Dhondy's Barbershop's physical identity into a high-end, responsive online platform designed with modern UI/UX principles.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 3. Learning Objectives
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* Build responsive web interfaces using Tailwind CSS.
+* Implement component-based frontend architecture in Laravel using Blade Components.
+* Master layout inheritance using standard Laravel `layouts/app.blade.php`.
+* Structure reusable UI elements such as navigation bars, cards, and buttons.
+* Develop a clean, mobile-first design system with proper typographic contrast and spacing.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+---
 
-## Agentic Development
+## 4. Responsive Web Design
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+* **Mobile-First Design:** The page layout was designed starting from mobile breakpoints up to large desktop views, ensuring fast loading times and uncompromised usability across all device types.
+* **Responsive Breakpoints:** Uses Tailwind CSS breakpoints (`sm:`, `md:`, `lg:`) and custom media queries to scale typography and adjust grid columns dynamically.
+* **Flexbox & CSS Grid:** Applied Flexbox (`flex`, `items-center`, `justify-between`) for navigation headers and buttons. Applied CSS Grid (`grid`, `md:grid-cols-3`) for feature lists, product showcases, pricing tiers, and testimonials.
+* **User Experience (UX):** Responsive web design is critical for modern applications as a majority of users discover local businesses via mobile devices. Ensuring smooth scrolling, legible typography, and touch-friendly buttons enhances client trust and retention.
 
-```bash
-composer require laravel/boost --dev
+---
 
-php artisan boost:install
-```
+## 5. Tailwind CSS
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+* **Utility-First CSS:** Tailwind provides low-level utility classes that allow building custom, highly tailored designs directly inside markup or custom external stylesheets.
+* **Advantages:** Eliminates CSS naming bloat, speeds up development time, and enforces consistent spacing and color system rules.
+* **Custom Styling Setup:** Custom rules were separated into `resources/css/app.css` using standard `@import "tailwindcss";` directives and structured CSS class names (`.hero-section`, `.feature-card`, `.btn-primary`).
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 6. Blade Components
 
-## Code of Conduct
+Blade Components allow breaking UI elements into modular, reusable blocks to eliminate code duplication and maintain frontend cleanliness.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Component Architecture
+* `resources/views/layouts/app.blade.php` - Main global layout wrapper.
+* `resources/views/components/navbar.blade.php` - Sticky navigation header.
+* `resources/views/components/hero.blade.php` - Brand intro section.
+* `resources/views/components/feature-card.blade.php` - Reusable service/feature card.
+* `resources/views/components/pricing-card.blade.php` - Package pricing tier card.
+* `resources/views/components/testimonial-card.blade.php` - Customer review card.
+* `resources/views/components/button.blade.php` - Primary/secondary CTA button.
+* `resources/views/components/footer.blade.php` - Brand details, links, and contact section.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 7. User Interface Design
 
-## License
+* **Color Palette:** High-contrast monochromatic theme using `#000000` (Pure Black), `#0a0a0a` / `#171717` (Neutral Dark Grey), and `#ffffff` (Pure White).
+* **Typography:** Modern, clean sans-serif stack (`ui-sans-serif`, `system-ui`) with uppercase tracked headers (`letter-spacing: 0.1em`).
+* **Iconography:** Minimalist emojis (`💈`, `☕`, `📅`, `🧼`, `🧴`, `🎧`) providing immediate visual context.
+* **Button Styles:** High-contrast inverted primary buttons (white background with black text) and subtle bordered secondary buttons.
+* **Card Design:** Semi-transparent dark cards (`rgba(23, 23, 23, 0.5)`) featuring subtle borders (`border-neutral-800`) and soft white border hover highlights.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 8. Folder Structure
+
+* **resources/views/layouts**
+* **resources/views/components**
+* **resources/views/pages** 
+* **public**
+* **screenshots** 
+* **documentation**  
+
+## 9. Screenshots
+
+| Screenshot Asset | Visual Preview |
+| :--- | :---: |
+| **Desktop View** | ![Desktop View](screenshots/01_registration_form.png) |
+| **Tablet View** | ![Tablet View](screenshots/02_validation_errors.png) |
+| **Mobile View** | ![Mobile View](screenshots/03_successful.png) |
+| **Navigation Bar** | ![Navigation Bar](screenshots/04_flash_message.png) |
+| **Hero Section** | ![Hero Section](screenshots/05_uploaded.png) |
+| **Features Section** | ![Features Section](screenshots/06_database.png) |
+| **Pricing Section** | ![Pricing Section](screenshots/07_profile.png) |
+| **Testimonials** | ![Testimonials](screenshots/08_project_structure.png) |
+| **GitHub Repository** | ![Repository](screenshots/09_github_repository.png) |
